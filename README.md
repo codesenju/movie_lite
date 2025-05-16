@@ -11,7 +11,7 @@ graph TD
 
 ```
 # Part 1 - Prerequisites
-* Register at LinuxOne Community Cloud <a href="https://developer.ibm.com/linuxone/" target="_blank">here</a> for a trial account and get a Ubuntu VM.
+* Register at LinuxOne Community Cloud <a href="https://linuxone.cloud.marist.edu/#/register?flag=VM" target="_blank">here</a> for a trial account and get a Ubuntu VM.
 
 * Click on Try Virtual Machines on the LinuxONE™ Community Cloud
 
