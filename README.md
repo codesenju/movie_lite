@@ -37,7 +37,7 @@ exit
 ssh -i mykey.pem linux1@<your-server>
 
 git clone https://github.com/codesenju/api_pgmoviedb.git
-cd nodeapi_pgmoviedb/
+cd api_pgmoviedb/
 ```
 ### Quick Setup:
 ```shell
