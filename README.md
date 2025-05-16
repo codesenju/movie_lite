@@ -2,22 +2,12 @@
 ```mermaid
 
 graph TD
-    subgraph LinuxONE Ubuntu Host
+    User[External User] -->|HTTP :8000| FastAPI
+    subgraph LinuxONE Ubuntu
         subgraph Docker
-            db[(PostgreSQL\nMovie DB)]
-            fastapi1[FastAPI App 1\n8000]
+            FastAPI[FastAPI App] -->|SQL :5432| Postgres[(PostgreSQL)]
         end
-        fastapi1 -->|SQL| db
     end
-    
-    user[User] -->|HTTP Requests| fastapi1
-
-    classDef vm fill:#e6f3ff,stroke:#333;
-    classDef container fill:#e1f5e1,stroke:#333;
-    classDef user fill:#ffebee,stroke:#333;
-    class LinuxONE, Docker vm;
-    class db,fastapi1 container;
-    class user user;
 
 ```
 # Part 1 - Prerequisites
@@ -31,7 +21,7 @@ graph TD
 # Setup Guide
 
 ### Prerequisite:
-- docker![alt text](https://file%2B.vscode-resource.vscode-cdn.net/Users/jazziro/codesenju/movie_lite/images/overview.png)
+- docker
 - jq
 - make (optional)
 ```bash
