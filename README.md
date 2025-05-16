@@ -11,11 +11,10 @@ graph TD
 
 ```
 # Part 1 - Prerequisites
-* Register at LinuxOne Community Cloud <a href="https://linuxone.cloud.marist.edu/#/register?flag=VM" target="_blank"  rel="noopener noreferrer">here</a> for a trial account and get an Ubuntu VM.
 
-* Click on Try Virtual Machines on the LinuxONE™ Community Cloud
+* Register at LinuxOne Community Cloud <a href="https://linuxone.cloud.marist.edu/#/register?flag=VM" target="_blank"  rel="noopener noreferrer">here</a> for a trial account and get an **Ubuntu VM**.
 
-![try](images/try.PNG)
+![register](images/ibm_linuxone_register.png)
 
 # Part 2 – Setup your environment on LinuxONE VM
 # Setup Guide
@@ -76,7 +75,7 @@ This project uses IMDb data, which is freely available for personal and non-comm
 - The IMDb dataset used in this project is obtained from IMDb’s [official data dumps](https://datasets.imdbws.com/).
 - **IMDb owns all rights to the data**. This project does **not** claim ownership of any IMDb data.
 - The use of IMDb data in this project is solely for educational, research, or personal testing purposes.
-- This project is **not affiliated with or endorsed by IMDb or Amazon** in any way.
+- This project is **not affiliated with or endorsed by IMDb or IBM** in any way.
 - Redistribution of IMDb data outside of IMDb’s licensed use is **prohibited**.
 
 ### Usage Terms
