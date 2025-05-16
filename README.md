@@ -30,7 +30,7 @@ sudo snap install docker
 sudo snap install jq
 ```
 ```bash
-sudo usermod -aG docker linux1
+sudo usermod -aG root linux1
 # above changes won't apply until the user starts a new shell session
 # Exit your current shell
 exit
