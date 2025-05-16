@@ -21,7 +21,7 @@ graph TD
 # Setup Guide
 
 ### Prerequisite:
-- docker
+- docker & docker compose
 - jq
 - make (optional)
 ```bash
