@@ -1,5 +1,25 @@
-![Diagram](images/overview.png)
 
+```mermaid
+
+graph TD
+    subgraph LinuxONE Ubuntu Host
+        subgraph Docker
+            db[(PostgreSQL\nMovie DB)]
+            fastapi1[FastAPI App 1\n8000]
+        end
+        fastapi1 -->|SQL| db
+    end
+    
+    user[User] -->|HTTP Requests| fastapi1
+
+    classDef vm fill:#e6f3ff,stroke:#333;
+    classDef container fill:#e1f5e1,stroke:#333;
+    classDef user fill:#ffebee,stroke:#333;
+    class LinuxONE, Docker vm;
+    class db,fastapi1 container;
+    class user user;
+
+```
 # Part 1 - Prerequisites
 * Register at LinuxOne Community Cloud <a href="https://developer.ibm.com/linuxone/" target="_blank">here</a> for a trial account and get a Ubuntu VM.
 
@@ -11,7 +31,7 @@
 # Setup Guide
 
 ### Prerequisite:
-- docker
+- docker![alt text](https://file%2B.vscode-resource.vscode-cdn.net/Users/jazziro/codesenju/movie_lite/images/overview.png)
 - jq
 - make (optional)
 ```bash
