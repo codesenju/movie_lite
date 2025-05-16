@@ -11,6 +11,7 @@ graph TD
 
 ```
 # Part 1 - Prerequisites
+
 * Register at LinuxOne Community Cloud <a href="https://linuxone.cloud.marist.edu/#/register?flag=VM" target="_blank"  rel="noopener noreferrer">here</a> for a trial account and get an **Ubuntu VM**.
 
 ![register](images/ibm_linuxone_register.png)
