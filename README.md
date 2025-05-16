@@ -28,7 +28,7 @@ graph TD
 sudo systemctl restart snapd
 sudo apt update
 sudo snap install docker
-
+sudo snap install jq
 sudo usermod -aG docker linux1
 # above changes won't apply until the user starts a new shell session
 # Exit your current shell
