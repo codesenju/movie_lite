@@ -66,6 +66,69 @@ curl localhost:8000/api/v1/movies | jq
 ## Visit the api documentation: http://\<linux1-ip\>:8000/docs
 
 
+# Part 3: Talk to your DB with AI.
+## Prerequisites:
+- [nodejs and npm installed](https://nodejs.org/en/download/)
+```bash
+npx -v
+npm -v
+node -v
+```
+![nodejs](./images/nodejs.png)
+- [Visual Studio Code](https://code.visualstudio.com/download)
+
+## Setup Copilot in VS Code
+- Open Visual Studio Code
+- Install and configure the GitHub Copilot extension
+- Enable agent mode (check Copilot Labs or experimental settings)
+
+    - 💡 Agent mode allows Copilot to interface with external tools (like databases) via MCP.
+
+![add-mcp-server](./images/gifs/setup-copilot.gif)
+
+## Configure the MCP Server
+
+MCP stands for Model Context Protocol — it lets LLMs like Copilot securely communicate with things like databases.
+
+Add this to your settings.json in VS Code:
+
+- Ctrl + Shift + P (Cmd + Shift + P on MacOS), search for user settings.
+
+```json
+{
+  "mcp": {
+      "servers": {
+          "postgres": {
+              "command": "npx",
+              "args": [
+                  "-y",
+                  "@modelcontextprotocol/server-postgres",
+                  "postgresql://postgres:12345@148.100.77.189:5432/movie"
+              ]
+          }
+      }
+  }
+}
+```
+
+![vs-code-settings](./images/gifs/add-mcp-server.gif)
+
+### Ask Your First Question
+Open Copilot Chat and ask Copilot something like:
+
+`Study the postgres schema and tell me how many movies were released in 1992?`
+
+Copilot will:
+
+- Interpret your natural language prompt.
+- Connect to the PostgreSQL database via MCP.
+- Generate and run a SQL query.
+- Return the result directly in the editor.
+
+![ai-query](./images/gifs/query.gif)
+
+---
+
 # 📜 Disclaimer
 
 This project uses IMDb data, which is freely available for personal and non-commercial use under IMDb’s [Terms and Conditions](https://www.imdb.com/conditions).
@@ -85,3 +148,4 @@ By using this project, you acknowledge that:
 - You are responsible for complying with IMDb’s terms of service.
 - You must not use this project or its dataset for commercial purposes.
 - You must not publicly redistribute IMDb data unless explicitly permitted by IMDb.
+
